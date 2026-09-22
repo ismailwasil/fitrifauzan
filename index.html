@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Wedding of Safitri & Fauzan</title>
+  <meta name="description" content="Wedding invitation of Safitri & Fauzan — 15 November 2026">
+
+  <meta property="og:title" content="The Wedding of Safitri & Fauzan">
+  <meta property="og:description" content="With love, we invite you to celebrate our wedding — 15 November 2026">
+  <meta property="og:image" content="assets/images/hero.webp">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/images/modern.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ OPENING SCREEN ============ -->
+  <section id="opening" class="opening" aria-label="Opening screen">
+    <div class="opening__frame">
+      <p class="opening__eyebrow">The Wedding Of</p>
+      <h1 class="opening__names"><span data-bind="brideFirstName">Safitri</span> <span class="opening__amp">&amp;</span>
+        <span data-bind="groomFirstName">Fauzan</span>
+      </h1>
+      <p class="opening__date" data-bind="weddingDateDots">15 &nbsp;·&nbsp; 11 &nbsp;·&nbsp; 2026</p>
+
+      <div class="opening__guest">
+        <span class="opening__guest-label">Kepada Yth.</span>
+        <span class="opening__guest-name" data-guest-name>Tamu Undangan</span>
+      </div>
+
+      <button type="button" id="openInvitation" class="btn btn--open">
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+    <div class="opening__bg" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main" class="main" hidden>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__media">
+        <img src="assets/images/adat-jawa.jpeg" alt="Safitri and Fauzan" class="hero__image" loading="eager">
+      </div>
+      <div class="hero__content">
+        <p class="hero__kicker reveal">We Are Getting Married</p>
+        <h2 class="hero__title reveal-up"><span data-bind="brideFirstName">Safitri</span><br>&amp; <span
+            data-bind="groomFirstName">Fauzan</span></h2>
+        <p class="hero__date reveal"><span data-bind="weddingDateLong">15 November 2026</span> &mdash; <span
+            data-bind="weddingCity">Sampang</span></p>
+        <p class="hero__guest reveal">Kepada <span data-guest-name>Tamu Undangan</span>, dengan penuh sukacita kami
+          mengundang Anda.</p>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown" id="countdown-section" aria-label="Countdown">
+      <div class="container">
+        <p class="section-label reveal">Menghitung Hari</p>
+        <div class="countdown__grid" id="countdown" role="timer" aria-live="polite">
+          <div class="countdown__unit reveal-scale">
+            <span class="countdown__value" data-unit="days">00</span>
+            <span class="countdown__caption">Hari</span>
+          </div>
+          <div class="countdown__unit reveal-scale">
+            <span class="countdown__value" data-unit="hours">00</span>
+            <span class="countdown__caption">Jam</span>
+          </div>
+          <div class="countdown__unit reveal-scale">
+            <span class="countdown__value" data-unit="minutes">00</span>
+            <span class="countdown__caption">Menit</span>
+          </div>
+          <div class="countdown__unit reveal-scale">
+            <span class="countdown__value" data-unit="seconds">00</span>
+            <span class="countdown__caption">Detik</span>
+          </div>
+        </div>
+        <p class="countdown__arrived" id="countdownArrived" hidden>Our Wedding Day Has Arrived</p>
+      </div>
+    </section>
+
+    <!-- QURAN VERSE -->
+    <section class="verse" aria-label="Ayat suci">
+      <div class="container container--narrow">
+        <i data-lucide="quote" class="w-12 h-12 mx-auto mb-3 text-stone-300" style="color: var(--accent)"></i>
+        <blockquote class="verse__text reveal-up">
+          &ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+          sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+          sayang.&rdquo;
+        </blockquote>
+        <cite class="verse__source reveal">QS. Ar-Rum : 21</cite>
+      </div>
+    </section>
+
+    <!-- THE COUPLE -->
+    <section class="couple" id="couple" aria-label="The Couple">
+      <div class="container">
+        <p class="section-label reveal">The Couple</p>
+      </div>
+
+      <div class="couple__pair">
+        <article class="couple__member couple__member--bride">
+          <div class="couple__portrait reveal-left">
+            <img src="assets/images/bride.png" alt="Fauzan Fulanah" loading="lazy">
+          </div>
+          <div class="couple__info reveal-up">
+            <p class="couple__role">The Bride</p>
+            <h3 class="couple__name" data-bind="brideName">Fauzan Fulanah</h3>
+            <p class="couple__parents">Putri pertama dari<br><span data-bind="brideParents">Bapak Fulan &amp; Ibu
+                Fulanah</span></p>
+            <a href="#" class="couple__social" data-bind-href="brideInstagramUrl" target="_blank" rel="noopener"><span
+                data-bind="brideInstagramHandle">@Fauzan</span></a>
+          </div>
+        </article>
+
+        <div class="couple__divider" aria-hidden="true">&amp;</div>
+
+        <article class="couple__member couple__member--groom">
+          <div class="couple__portrait reveal-right">
+            <img src="assets/images/groom.png" alt="Safitri Fulan" loading="lazy">
+          </div>
+          <div class="couple__info reveal-up">
+            <p class="couple__role">The Groom</p>
+            <h3 class="couple__name" data-bind="groomName">Safitri Fulan</h3>
+            <p class="couple__parents">Putra kedua dari<br><span data-bind="groomParents">Bapak Fulan &amp; Ibu
+                Fulanah</span></p>
+            <a href="#" class="couple__social" data-bind-href="groomInstagramUrl" target="_blank" rel="noopener"><span
+                data-bind="groomInstagramHandle">@Safitri</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WEDDING DAY -->
+    <section class="event" id="event" aria-label="Wedding Day">
+      <div class="container">
+        <p class="section-label reveal">The Wedding Day</p>
+
+        <div class="event__grid">
+          <article class="event__card reveal-up">
+            <p class="event__type">Akad Nikah</p>
+            <p class="event__daynum" data-bind="akadDay">12</p>
+            <p class="event__month" data-bind="akadMonthYear">December 2026</p>
+            <ul class="event__details">
+              <li><i data-lucide="clock"></i><span data-bind="akadTime">08.00 WIB</span></li>
+              <li><i data-lucide="map-pin"></i><span><span data-bind="akadVenue">Masjid Al-Ikhlas</span><br><span
+                    data-bind="akadAddress">Jl. Melati No. 10, Jakarta Selatan</span></span></li>
+            </ul>
+            <div class="event__actions">
+              <a class="link-btn" id="akadMapLink" href="#" target="_blank" rel="noopener">Lihat Lokasi</a>
+              <button type="button" class="link-btn" id="akadIcsBtn">Simpan Tanggal</button>
+            </div>
+          </article>
+
+          <article class="event__card reveal-up">
+            <p class="event__type">Resepsi</p>
+            <p class="event__daynum" data-bind="resepsiDay">12</p>
+            <p class="event__month" data-bind="resepsiMonthYear">December 2026</p>
+            <ul class="event__details">
+              <li><i data-lucide="clock"></i><span data-bind="resepsiTime">11.00 &mdash; 14.00 WIB</span></li>
+              <li><i data-lucide="map-pin"></i><span><span data-bind="resepsiVenue">Grand Ballroom Hotel
+                    Mulia</span><br><span data-bind="resepsiAddress">Jl. Asia Afrika, Jakarta Selatan</span></span></li>
+            </ul>
+            <div class="event__actions">
+              <a class="link-btn" id="resepsiMapLink" href="#" target="_blank" rel="noopener">Lihat Lokasi</a>
+              <button type="button" class="link-btn" id="resepsiIcsBtn">Simpan Tanggal</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery" aria-label="Gallery">
+      <div class="container">
+        <p class="section-label reveal">Memories</p>
+      </div>
+      <div class="gallery__grid" id="galleryGrid">
+        <button class="gallery__item gallery__item--wide reveal-scale" data-index="0" type="button"
+          aria-label="Buka foto 1">
+          <img src="assets/images/modern.jpg" alt="Momen kebersamaan 1" loading="lazy">
+        </button>
+        <button class="gallery__item gallery__item--tall reveal-scale" data-index="1" type="button"
+          aria-label="Buka foto 2">
+          <img src="assets/images/adat-jawa.jpeg" alt="Momen kebersamaan 2" loading="lazy">
+        </button>
+        <button class="gallery__item reveal-scale" data-index="2" type="button" aria-label="Buka foto 3">
+          <img src="assets/images/modern-islami.jpg" alt="Momen kebersamaan 3" loading="lazy">
+        </button>
+        <button class="gallery__item gallery__item--feature reveal-scale" data-index="3" type="button"
+          aria-label="Buka foto 4">
+          <img src="assets/images/pose~1.jpg" alt="Momen kebersamaan 4" loading="lazy">
+        </button>
+        <button class="gallery__item reveal-scale" data-index="4" type="button" aria-label="Buka foto 5">
+          <img src="assets/images/pose~2.jpg" alt="Momen kebersamaan 5" loading="lazy">
+        </button>
+        <button class="gallery__item gallery__item--wide reveal-scale" data-index="5" type="button"
+          aria-label="Buka foto 6">
+          <img src="assets/images/bride.png" alt="Momen kebersamaan 6" loading="lazy">
+        </button>
+      </div>
+    </section>
+
+    <!-- WEDDING GIFT -->
+    <section class="gift" id="gift" aria-label="Wedding Gift">
+      <div class="container container--narrow">
+        <p class="section-label reveal">Wedding Gift</p>
+        <p class="gift__intro reveal-up">Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila Anda ingin
+          memberikan tanda kasih, dapat melalui informasi berikut.</p>
+
+        <div class="accordion reveal" id="giftAccordion">
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger" aria-expanded="false">
+              <span>Rekening Bank</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__panel">
+              <div class="accordion__panel-inner">
+                <div class="gift__account" data-bank-index="0">
+                  <div class="gift__account-info">
+                    <p class="gift__bank" data-bind="bankName">BCA</p>
+                    <p class="gift__number" data-bind="bankNumber">1234 5678 90</p>
+                    <p class="gift__owner" data-bind="bankOwner">a.n. Safitri Fulan</p>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="1234567890">Salin Nomor Rekening</button>
+                </div>
+                <div class="gift__account" data-bank-index="1">
+                  <div class="gift__account-info">
+                    <p class="gift__bank" data-bind="bankName">Mandiri</p>
+                    <p class="gift__number" data-bind="bankNumber">0987 6543 21</p>
+                    <p class="gift__owner" data-bind="bankOwner">a.n. Fauzan Fulanah</p>
+                  </div>
+                  <button type="button" class="copy-btn" data-copy="0987654321">Salin Nomor Rekening</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button type="button" class="accordion__trigger" aria-expanded="false">
+              <span>Alamat Pengiriman Kado</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="accordion__panel">
+              <div class="accordion__panel-inner">
+                <p class="gift__address"><span data-bind="footerNames">Safitri &amp; Fauzan</span><br><span
+                    data-bind="giftAddressLine1">Jl. Melati No. 10, RT 01/RW 02</span><br><span
+                    data-bind="giftAddressLine2">Jakarta Selatan, 12345</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp" aria-label="RSVP">
+      <div class="container container--narrow">
+        <p class="section-label reveal">RSVP</p>
+        <p class="rsvp__intro reveal-up">Mohon konfirmasi kehadiran Anda sebelum <strong>5 Desember 2026</strong> agar
+          kami dapat mempersiapkan acara dengan baik.</p>
+
+        <form id="rsvpForm" class="rsvp__form reveal-up" novalidate>
+          <div class="field">
+            <label for="rsvpName">Nama</label>
+            <input type="text" id="rsvpName" name="name" autocomplete="name" required>
+            <span class="field__error" id="rsvpNameError" role="alert"></span>
+          </div>
+
+          <fieldset class="field">
+            <legend>Konfirmasi Kehadiran <small>(pencet salah satu)</small></legend>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="attendance" value="hadir" required>
+                <span>Ya, saya akan hadir</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="attendance" value="tidak-hadir" required>
+                <span>Maaf, saya tidak dapat hadir</span>
+              </label>
+            </div>
+            <span class="field__error" id="rsvpAttendanceError" role="alert"></span>
+          </fieldset>
+
+          <div class="field">
+            <label for="rsvpGuests">Jumlah Tamu</label>
+            <select id="rsvpGuests" name="guests">
+              <option value="1">1 Orang</option>
+              <option value="2">2 Orang</option>
+              <option value="3">3 Orang</option>
+              <option value="4">4 Orang</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="rsvpMessage">Ucapan &amp; Doa</label>
+            <textarea id="rsvpMessage" name="message" rows="4" maxlength="500"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--submit">
+            <span class="btn__label">Kirim Konfirmasi</span>
+            <span class="btn__loading" hidden>Mengirim&hellip;</span>
+          </button>
+
+          <p class="rsvp__success" id="rsvpSuccess" role="status" hidden>
+            Terima kasih. Konfirmasi kehadiran Anda telah kami terima.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Footer">
+      <div class="container container--narrow">
+        <p class="footer__monogram reveal" data-bind="footerMonogram">A &amp; A</p>
+        <p class="footer__names reveal" data-bind="footerNames">Safitri &amp; Fauzan</p>
+        <p class="footer__date reveal" data-bind="footerDate">12 . 12 . 2026</p>
+        <p class="footer__thanks reveal">Digital Wedding Created by ISMAIL @2026</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeri foto" hidden>
+    <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Tutup galeri"><i
+        data-lucide="x"></i></button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Foto sebelumnya"><i
+        data-lucide="chevron-left"></i></button>
+    <div class="lightbox__stage">
+      <img src="" alt="" id="lightboxImage" class="lightbox__image">
+    </div>
+    <button type="button" class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Foto berikutnya"><i
+        data-lucide="chevron-right"></i></button>
+    <p class="lightbox__counter" id="lightboxCounter" aria-live="polite"></p>
+  </div>
+
+  <!-- ============ FLOATING CONTROLS ============ -->
+  <button type="button" class="music-toggle" id="musicToggle" aria-label="Putar musik" aria-pressed="false" hidden>
+    <i data-lucide="volume-2"></i>
+  </button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/music/wedding.mp3" type="audio/mpeg">
+  </audio>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi cepat" hidden>
+    <a href="#hero" data-nav="hero"><i data-lucide="home"></i><span>Home</span></a>
+    <a href="#couple" data-nav="couple"><i data-lucide="heart"></i><span>Couple</span></a>
+    <a href="#event" data-nav="event"><i data-lucide="calendar"></i><span>Event</span></a>
+    <a href="#gallery" data-nav="gallery"><i data-lucide="image"></i><span>Gallery</span></a>
+    <a href="#rsvp" data-nav="rsvp"><i data-lucide="mail-check"></i><span>RSVP</span></a>
+  </nav>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
