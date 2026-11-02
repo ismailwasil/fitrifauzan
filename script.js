@@ -8,13 +8,13 @@
 const weddingData = {
   groom: {
     name: "Ahmad Fauzan",
-    instagram: "@ahmad",
+    instagram: "@-",
     parents: "Bapak Wasor (Alm.) & Ibu Nurul",
     image: "assets/images/groom.png",
   },
   bride: {
-    name: "Nur Syafitri",
-    instagram: "@syafitri",
+    name: "Nur Safitri",
+    instagram: "@-",
     parents: "Bapak Misde & Ibu Nurul Qamariayh",
     image: "assets/images/bride.png",
   },
@@ -337,15 +337,15 @@ function buildICS(event) {
   const lines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Wedding Invitation//Ahmad & Aisyah//ID",
+    "PRODID:-//Wedding Invitation//Fauzan & Safitri//ID",
     "BEGIN:VEVENT",
-    `UID:${Date.now()}@wedding-ahmad-aisyah`,
+    `UID:${Date.now()}@wedding-fauzan-safitri`,
     `DTSTAMP:${toICS(new Date())}`,
     `DTSTART:${toICS(dtStart)}`,
     `DTEND:${toICS(dtEnd)}`,
-    `SUMMARY:${event.title} - Ahmad & Aisyah`,
+    `SUMMARY:${event.title} - Fauzan & Safitri`,
     `LOCATION:${event.venue}, ${event.address}`,
-    `DESCRIPTION:${event.title} pernikahan Ahmad & Aisyah`,
+    `DESCRIPTION:${event.title} pernikahan Fauzan & Safitri`,
     "END:VEVENT",
     "END:VCALENDAR",
   ];
