@@ -44,8 +44,8 @@ const weddingData = {
   },
 
   bankAccounts: [
-    { bank: "BCA", number: "1234567890", owner: "Ahmad Fauzan" },
-    { bank: "Mandiri", number: "0987654321", owner: "Nur Syafitri" },
+    { bank: "BNI", number: "1348890217", owner: "Nur Safitri" },
+    // { bank: "BCA", number: "1234567890", owner: "Ahmad Fauzan" },
   ],
 
   giftAddress: {
@@ -533,6 +533,8 @@ function initRSVP() {
   const form = document.getElementById("rsvpForm");
   if (!form) return;
 
+  const WA_NUMBER = "6281909078024"; // format internasional: 62 + nomor tanpa 0
+
   const nameInput = document.getElementById("rsvpName");
   const nameError = document.getElementById("rsvpNameError");
   const attendanceError = document.getElementById("rsvpAttendanceError");
@@ -563,6 +565,38 @@ function initRSVP() {
     return valid;
   }
 
+  function buildWhatsAppMessage(data) {
+    const lines = [
+      "Assalamu'alaikum / Halo, saya ingin mengonfirmasi kehadiran (RSVP).",
+      "",
+      "*Nama:* " + data.name,
+      "*Konfirmasi Kehadiran:* " + data.attendance,
+    ];
+
+    if (data.guests) {
+      lines.push("*Jumlah Tamu:* " + data.guests);
+    }
+
+    if (data.message) {
+      lines.push("*Ucapan/Pesan:* " + data.message);
+    }
+
+    lines.push("", "Terima kasih. 🙏");
+
+    return lines.join("\n");
+  }
+
+  function openWhatsApp(data) {
+    const text = encodeURIComponent(buildWhatsAppMessage(data));
+    const url = "https://wa.me/" + WA_NUMBER + "?text=" + text;
+
+    // Coba buka tab baru; jika diblokir browser, arahkan di tab yang sama
+    const win = window.open(url, "_blank");
+    if (!win) {
+      window.location.href = url;
+    }
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!validate()) return;
@@ -572,7 +606,7 @@ function initRSVP() {
       name: formData.get("name").toString().trim(),
       attendance: formData.get("attendance"),
       guests: formData.get("guests"),
-      message: formData.get("message").toString().trim(),
+      message: (formData.get("message") || "").toString().trim(),
       submittedAt: new Date().toISOString(),
     };
 
@@ -581,7 +615,7 @@ function initRSVP() {
     btnLoading.hidden = false;
 
     try {
-      await submitRSVP(data);
+      openWhatsApp(data);
       form.reset();
       successEl.hidden = false;
       form
